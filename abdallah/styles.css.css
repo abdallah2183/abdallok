@@ -1,0 +1,171 @@
+/* styles.css */
+body {
+    font-family: 'Roboto', sans-serif; /* استخدام خط Roboto */
+    direction: rtl; /* لجعل النص يظهر من اليمين إلى اليسار */
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 18px; /* حجم الخط الأساسي */
+}
+
+body.dark {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+header {
+    background: linear-gradient(90deg, #4CAF50, #3e8e41); /* تدرج لوني */
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* إضافة ظل للرأس */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em; /* تكبير حجم عنوان الصفحة */
+}
+
+.header-image {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.quran-image {
+    max-width: 100%; /* جعل الصورة تتناسب مع عرض الشاشة */
+    height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+    border-radius: 10px; /* إضافة زوايا دائرية للصورة */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* إضافة ظل للصورة */
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em; /* حجم الخط في حقل الإدخال */
+    transition: border 0.3s; /* تأثير عند التركيز */
+}
+
+input[type="text"]:focus {
+    border: 1px solid #4CAF50; /* تغيير لون الحدود عند التركيز */
+}
+
+nav {
+    margin: 20px 0;
+}
+
+.surah-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.surah-list li {
+    cursor: pointer;
+    padding: 10px;
+    background: #e7e7e7;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+    font-size: 1.1em; /* تكبير حجم الخط في قائمة السور */
+}
+
+.surah-list li:hover {
+    background: #d4d4d4;
+    transform: scale(1.02);
+}
+
+button {
+    margin: 5px;
+    padding: 10px 15px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    font-size: 1.1em; /* تكبير حجم الخط في الأزرار */
+}
+
+button:hover {
+    background: #45a049;
+    transform: scale(1.05); /* تأثير تكبير عند التمرير */
+}
+
+main {
+    padding: 20px;
+}
+
+.surah {
+    background: white;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none; /* إخفاء المحتوى في البداية */
+    opacity: 0; /* لجعل المحتوى غير مرئي */
+    transition: opacity 0.5s ease-in-out; /* تأثير الانتقال */
+}
+
+.surah.show {
+    display: block; /* عرض المحتوى */
+    opacity: 1; /* جعل المحتوى مرئي */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #4CAF50;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.1em; /* تكبير حجم الخط في التذييل */
+}
+
+#translation {
+    margin-top: 15px;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1.1em; /* تكبير حجم الخط في الترجمة */
+}
+
+#favorites-section {
+    margin-top: 20px;
+}
+
+#favorites-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.button-group {
+    margin-top: 15px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em; /* تقليل حجم العنوان على الشاشات الصغيرة */
+    }
+
+    .quran-image {
+        width: 80%; /* جعل الصورة تأخذ 80% من عرض الشاشة */
+    }
+
+    button {
+        font-size: 1em; /* تقليل حجم الخط في الأزرار */
+    }
+
+    input[type="text"] {
+        font-size: 0.9em; /* تقليل حجم الخط في حقل الإدخال */
+    }
+
+    .surah-list li {
+        font-size: 1em; /* تقليل حجم الخط في قائمة السور */
+    }
+}
